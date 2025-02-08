@@ -46,7 +46,7 @@
 
 ### 1.3 Machine Learning Libraries
 
-### 1.3.1 Numerical and Statistical Computations 
+### 1.3.1 Numerical and Statistical Computations
 
 - Numpy
 - Scipy
@@ -96,7 +96,7 @@
 
 ---
 
-## 2 Data: The Gold and Oil of the 21st Century
+## 2 Data: The Gold and Oil of 21st Century
 
 ### 2.1 Types of Data
 
@@ -245,6 +245,13 @@
       - Percentile based Clipping
     - Feature Transformation or Scaling to reduce impact of Outliers
 
+\chapter{Data Cleaning}
+\input{chapters/data_cleaning/standardization.tex}
+\input{chapters/data_cleaning/missing_value_handling.tex}
+\input{chapters/data_cleaning/outlier_handling.tex}
+\input{chapters/data_cleaning/duplicates_handling.tex}
+\input{chapters/data_cleaning/imbalanced_dataset_handling.tex}
+
     ---
 
   - Handling Imbalance Dataset
@@ -260,9 +267,9 @@
   - RobustScaler
 
 - Categorical Variable Encoding
-  - One-hot Encoding
   - Label Encoding
   - Target Encoding
+  - One Hot Encoding (OHE)
   - Frequency Encoding
 
 - Curse of Dimensionality
@@ -342,9 +349,9 @@
 - Variations
   - Ordinary Least Squares (OLS)
   - Stochastic Gradient Descent Regressor (SGD Regressor)
+  - Polynomial Regression
   - Ridge Regression
   - Lasso Regression
-  - Polynomial Regression
   - Elastic Net Regression
 
 #### Logistic Regression
@@ -363,15 +370,13 @@
   - tol
 - Variations
   - Binary Logistic Regression
-  - Multinomial Logistic Regression (Softmax Regression)
+  - Multinomial Logistic Regression (also known as Softmax Regression)
   - Ordinal Logistic Regression
 
 #### Support Vector Machine (SVM)
 
 - Assumptions
   - Data Separability
-  - Balanced Classes
-  - Use of Kernels
 - Common Hyperparameters
   - C (Regularization Strength)
   - kernel
@@ -387,8 +392,7 @@
 #### K-Nearest Neighbors (KNN)
 
 - Assumptions
-  - **Similarity Assumption***: The dataset should contain similar data points.
-  - Since KNN is a non-parametric model, it only has one specific assumption on their own. Still the general assumptions applies to KNN also.
+  - Similarity Assumption
 - Common Hyperparameters
   - n_neighbors (k)
   - weights
@@ -396,8 +400,6 @@
 
 #### Decision Trees
 
-- Assumptions
-  - Since Decision Trees are non-parametric models, it doesn't have specific assumptions on their own. But still the general assumptions applies to Decision Trees also.
 - Common Hyperparameters
   - criterion
   - max_depth
@@ -406,21 +408,66 @@
   - max_features
   - max_leaf_nodes
   - splitter
+- Variations
+  - Random Forests
+  - Extra Trees
+  - Isolation Forests
+  - Gradient Boost
+  - Extreme Gradient Boost (XGBoost)
+  - LightGBM
+  - CatBoost
 
 #### Naive Bayes
 
 - Assumptions
-  - empty
+  - Conditional Independence of Features
+  - Feature Distribution Assumptions (Depends on the variation of Naive Bayes)
+  - Prior Probabilities
 - Common Hyperparameters
-  - empty
+  - alpha
+  - binarize
+  - var_smoothing
+- Variations
+  - Standard Naive Bayes
+  - Gaussian Naive Bayes
+  - Multinomial Naive Bayes
+  - Complement Naive Bayes
+  - Bernoulli Naive Bayes
+  - Categorical Naive Bayes
 
-### 4.3 Random Forest
-- Number of Trees (n_estimators)
-- Max Depth
-- Max Features
-- Bootstrap
+### Ensemble Methods
 
-### 4.4 Gradient Boosting (e.g., XGBoost, LightGBM, CatBoost)
+- Voting
+  - Hard Voting
+  - Soft Voting
+- Stacking
+- Blending
+- Bagging
+  - #### 4.3 Random Forest
+
+- Common Hyperparameters
+  - max_depth
+  - min_samples_split
+  - min_samples_leaf
+  - max_features
+  - max_leaf_nodes
+  - n_estimators
+  - bootstrap
+  - oob_score (Out-of-Bag Score)
+
+  - Extra Trees
+
+#### Boosting Algorithms
+
+- Ada Boost
+- Gradient Boost
+  - Standard Gradient Boost
+  - XGBoost
+  - LightGBM
+  - CatBoost
+
+#### 4.4 Gradient Boosting (e.g., XGBoost, LightGBM, CatBoost)
+
 - Learning Rate
 - Number of Trees
 - Max Depth
@@ -440,26 +487,10 @@
 - Stable Feature Distributions
 - Data Quality – Outliers
 - Data Quality – Missing Values
-
-### Ensemble Learning Algorithms
-
-- Voting
-  - Hard Voting
-  - Soft Voting
-- Stacking
-- Blending
-- Bagging
-  - Random Forests
-  - Extra Trees
-- Boosting
-  - Ada Boost
-  - Gradient Boost
-    - Standard Gradient Boost
-    - XGBoost
-    - LightGBM
-    - CatBoost
+- Since Tree-Based algorithms are non-parametric algorithms, these doesn't have specific assumptions on their own. But still the general assumptions applies to those also.
 
 ### Unsupervised Learning Algorithms
+
 - Clustering Algorithms
   - K-Means Clustering
   - Hierarchical Clustering
@@ -471,13 +502,11 @@
 - Anomaly Detection Algorithms
   - Isolation Forest
 
-
 ### 3.2 Regularization
 
 - L1 (Lasso)
 - L2 (Ridge)
 - Elastic Net
-
 
 ### Machine Learning Algorithm Characteristics
   
@@ -594,6 +623,10 @@
 - Scaling models in production
 - Monitoring and maintaining deployed models
 
+
+- Data Preparation and Preprocessing
+- Visualizations to Understand Distributions, Correlations, and Outliers
+
 ### 5. Glossary
 
 - Difference between Machine Learning Algorithm and Machine Learning Model
@@ -607,4 +640,3 @@
 - Predictor Variables
 - Independent Variables
 - Dependent Variable
-- 
