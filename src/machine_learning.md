@@ -320,19 +320,6 @@
 
 ## Machine Learning Algorithms
 
-### 4.3 Random Forest
-- Number of Trees (n_estimators)
-- Max Depth
-- Max Features
-- Bootstrap
-
-### 4.4 Gradient Boosting (e.g., XGBoost, LightGBM, CatBoost)
-- Learning Rate
-- Number of Trees
-- Max Depth
-- Subsample
-- Colsample_bytree
-
 ### Supervised Learning Algorithms
 
 #### Linear Regression
@@ -343,7 +330,7 @@
   - Homoscedasticity
   - Normality of Residuals
   - No Multicollinearity
-  - No Endogeneity (No Omitted Variable Bias)
+  - Exogeneity (also known as No Endogeneity and No Omitted Variable Bias)
 - Common Hyperparameters
   - loss
   - alpha
@@ -400,23 +387,25 @@
 #### K-Nearest Neighbors (KNN)
 
 - Assumptions
-  - Similarity Assumption
-  - Appropriate Distance Metric
-  - Choice of K
+  - **Similarity Assumption***: The dataset should contain similar data points.
+  - Since KNN is a non-parametric model, it only has one specific assumption on their own. Still the general assumptions applies to KNN also.
 - Common Hyperparameters
-  - Number of Neighbors
-  - Distance Metric (e.g., Euclidean, Manhattan)
-  - Weighting Method (Uniform, Distance)
+  - n_neighbors (k)
+  - weights
+  - metric
 
 #### Decision Trees
 
 - Assumptions
-  - empty
+  - Since Decision Trees are non-parametric models, it doesn't have specific assumptions on their own. But still the general assumptions applies to Decision Trees also.
 - Common Hyperparameters
-  - Max Depth
-  - Min Samples Split
-  - Min Samples Leaf
-  - Max Features
+  - criterion
+  - max_depth
+  - min_samples_split
+  - min_samples_leaf
+  - max_features
+  - max_leaf_nodes
+  - splitter
 
 #### Naive Bayes
 
@@ -424,6 +413,19 @@
   - empty
 - Common Hyperparameters
   - empty
+
+### 4.3 Random Forest
+- Number of Trees (n_estimators)
+- Max Depth
+- Max Features
+- Bootstrap
+
+### 4.4 Gradient Boosting (e.g., XGBoost, LightGBM, CatBoost)
+- Learning Rate
+- Number of Trees
+- Max Depth
+- Subsample
+- Colsample_bytree
 
 ### General Assumptions of ML Algorithms
 
