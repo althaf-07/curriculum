@@ -1,4 +1,4 @@
-# Full Classical Machine Learning Curriculum (without Mathematics and Deep Learning)
+# Complete Classical Machine Learning Curriculum (without Mathematics and Deep Learning)
 
 ---
 

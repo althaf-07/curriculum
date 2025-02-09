@@ -1,4 +1,4 @@
-# Mathematics For Machine Learning and Deep Learning
+# Complete Mathematics For Machine Learning and Deep Learning Curriculum
 
 ## 1. Linear Algebra
 
